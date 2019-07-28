@@ -11,8 +11,8 @@ from .models import Company
 def searching(request):
     return render(request,'mainPage/Page1.html')
 
-def showName(request, companyName):
-    return render(request,'mainPage/showName.html', { 'company':Company.objects.get(name=companyName) })
+def showName(request, companyId):
+    return render(request,'mainPage/showName.html', { 'company':Company.objects.get(pk=companyId) })
 
 def showAll(request):
     return render(request, 'mainPage/showAll.html', {'allCompanies':Company.objects.all()})

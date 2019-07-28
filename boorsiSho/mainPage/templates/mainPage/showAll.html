@@ -4,6 +4,6 @@
         همه ی شرکت ها
     </h1>
     {% for company in allCompanies %}
-        <a href="{% url 'showName' company.name %}">{{company.name}}</a><br>
+        <a href="{% url 'showName' companyId=company.pk %}">{{company.name}}</a><br>
     {% endfor %}
 </html>
