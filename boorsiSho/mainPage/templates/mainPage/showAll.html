@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+    <h1>
+        همه ی شرکت ها
+    </h1>
+    {% for company in allCompanies %}
+        <a href="{% url 'showName' company.name %}">{{company.name}}</a><br>
+    {% endfor %}
+</html>

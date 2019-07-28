@@ -6,20 +6,20 @@ class Industry(models.Model):
     name = models.CharField( max_length=100, default="" )
 
     def __str__(self):
-        return self.name
+        return str(self.name)
     
 class FinancialYear(models.Model):
     year = models.IntegerField( null=True )
 
     def __str__(self):
-        return self.year
+        return str(self.year)
 
 class Category(models.Model):
     name = models.CharField( max_length=100, default="" )
     industry = models.ForeignKey( Industry, on_delete=models.CASCADE, null=True )
 
     def __str__(self):
-        return self.name
+        return str(self.name)
 
 class Company(models.Model):
     name = models.CharField( max_length=100, default="" )
@@ -28,7 +28,7 @@ class Company(models.Model):
     industry = models.ForeignKey( Industry, on_delete=models.CASCADE, null=True )
 
     def __str__(self):
-        return self.name
+        return str(self.name)
 
 class FinancialRatio(models.Model):
     currentRatio = models.IntegerField( null=True )
@@ -37,4 +37,4 @@ class FinancialRatio(models.Model):
     financialYear = models.ForeignKey( FinancialYear, on_delete=models.CASCADE, null=True )
 
     def __str__(self):
-        return self.company
+        return str(self.company)

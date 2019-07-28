@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<title> Page 2 </title>
+		<meta charset="utf-8">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<style>
+	*{
+		direction: rtl;
+	}
+	.rtlDir{
+		direction: rtl;
+	}
+	</style>
+</head>
+	<!-- A grey horizontal navbar that becomes vertical on small screens -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark rtlDir">
+	  <a class="navbar-brand" href="#">سامانه تحلیل تکنیکال بورسی‌شو <img src="F:\Documents\IUST\Dr Rasouli Projects\بورسی‌شو\Develope\Frontend\Learning\Pictures\boursiesho-logo.JPG" width="160" height="90" class="d-inline-block align-top" alt="">
+    </a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav mr-auto">
+	      <li class="nav-item active">
+	        <a class="nav-link" class="text-warning" href="#"> صفحه اصلی <span class="sr-only">(current)</span></a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">Link</a>
+	      </li>
+	      <li class="nav-item dropdown">
+	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	          Dropdown
+	        </a>
+	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+	          <a class="dropdown-item" href="#">Action</a>
+	          <a class="dropdown-item" href="#">Another action</a>
+	          <div class="dropdown-divider"></div>
+	          <a class="dropdown-item" href="#">Something else here</a>
+	        </div>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+	      </li>
+	    </ul>
+	    <form class="form-inline my-2 my-lg-0">
+	      <input class="form-control mr-sm-2" type="search" placeholder="نماد مورد نظر خود را وارد کنید." aria-label="Search" style="margin-left: 10px; width:330px;">
+	      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">جستجو</button>
+	    </form>
+	  </div>
+	</nav>
+	<div class="jumbotron" style="direction:rtlDir ">
+		<h1 align="center">{{ company.name }}</h1>
+		‌<hr style="height:1px;border:none;color:#fee80c;background-color:#fee80c;">
+		<ul class="list-group" align="right">
+	    <li class="list-group-item">{{company.symbol}}</li>
+	    <li class="list-group-item">{{company.industry}}</li>
+	    <li class="list-group-item">{{company.category}}</li>
+	  </ul>
+	</div>
+	<ul class="nav nav-tabs" >
+		<li class="nav-item">
+			<a class="nav-link active"data-toggle="tab" href="#NesbatMali">نسبت‌های مالی</a></li>
+		<li class="nav-item">
+			<a class="nav-link" data-toggle="tab" href="#TarazName">ترازنامه</a></li>
+		<li class="nav-item">
+			<a class="nav-link" data-toggle="tab" href="#SoudZian">سود و زیان</a></li>
+		<li class="nav-item">
+			<a class="nav-link" data-toggle="tab" href="#VojohNaghd">گردش وجوه نقد</a></li>
+	</ul>
+	<div class="tab-content">
+	  <div id="NesbatMali" class="tab-pane fade in active">
+			<div id="accordion" id=#NesbatMali align="right">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          نسبت‌های نقدینگی
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Collapsible Group Item #2
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Collapsible Group Item #3
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+</div>
+  	</div>
+	 </div>
+	  <div id="TarazName" class="tab-pane fade">
+	    <h3>Menu 1</h3>
+	    <p>Some content in menu 1.</p>
+	  </div>
+	  <div id="SoudZian" class="tab-pane fade">
+	    <h3>Menu 2</h3>
+	    <p>Some content in menu 2.</p>
+	  </div>
+		<div id="VojohNaghd" class="tab-pane fade">
+			<h3>Menu 2</h3>
+			<p>Some content in menu 2.</p>
+		</div>
+	</div>
+</div>
+<a class="btn btn-lg btn-primary" href="/docs/4.3/components/navbar/" role="button" align="center">View navbar docs &raquo;</a>
+</html>

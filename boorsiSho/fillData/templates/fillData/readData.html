@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+
+<html>
+    <h1>upload data</h1>
+    <form enctype="multipart/form-data" method="post">
+        {% csrf_token %}
+        <input type="file" name="dataSheet">
+        <button type="submit">upload</button>
+    </form>    
+</html>
