@@ -36,5 +36,7 @@ class FinancialRatio(models.Model):
     company = models.ForeignKey( Company, on_delete=models.CASCADE, null=True )
     financialYear = models.ForeignKey( FinancialYear, on_delete=models.CASCADE, null=True )
 
+    dateCreated = models.DateTimeField( auto_now_add=True )
+
     def __str__(self):
         return str(self.company)

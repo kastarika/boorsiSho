@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Company
+from .models import Company, FinancialRatio
 # Create your views here.
 
 '''def fillInDatabase( request ):
@@ -12,7 +12,9 @@ def searching(request):
     return render(request,'mainPage/Page1.html')
 
 def showName(request, companyId):
-    return render(request,'mainPage/showName.html', { 'company':Company.objects.get(pk=companyId) })
+    currentCompany = Company.objects.get( pk=companyId )
+    currentFinancialRatio = FinancialRatio.objects.filter( company=currentCompany ).latest( 'dateCreated' )
+    return render(request,'mainPage/showName.html', { 'company':currentCompany, 'financialRatio':currentFinancialRatio })
 
 def showAll(request):
     return render(request, 'mainPage/showAll.html', {'allCompanies':Company.objects.all()})
