@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+    <h1>
+        search result
+    </h1>
+    <p>
+        {% for company in companyList %}
+            <a href="{% url 'mainPage:showName' companyId=company.pk %} ">{{ company.name }}</a>
+        {% endfor %}
+    </p>
+</html>

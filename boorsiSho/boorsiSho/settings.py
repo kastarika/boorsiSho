@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'mainPage.apps.MainpageConfig',
+    'searchPage.apps.SearchpageConfig',
     'fillData.apps.FilldataConfig',
 ]
 

@@ -25,7 +25,7 @@
 </head>
 	<!-- A grey horizontal navbar that becomes vertical on small screens -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark rtlDir">
-	  <a class="navbar-brand" href="#">سامانه تحلیل تکنیکال بورسی‌شو <img src="F:\Documents\IUST\Dr Rasouli Projects\بورسی‌شو\Develope\Frontend\Learning\Pictures\boursiesho-logo.JPG" width="160" height="90" class="d-inline-block align-top" alt="">
+	  <a class="navbar-brand" href="#">سامانه تحلیل بنیادی بورسی‌شو <img src="F:\Documents\IUST\Dr Rasouli Projects\بورسی‌شو\Develope\Frontend\Learning\Pictures\boursiesho-logo.JPG" width="160" height="90" class="d-inline-block align-top" alt="">
     </a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
@@ -93,8 +93,13 @@
 
     				<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
       					<div class="card-body">
-							nesbate ani = {{ financialRatio.currentRatio }}<br>
-							nebate jari = {{ financialRatio.quickRatio }}
+						  	<div class="jumbotron" style="direction:rtlDir ">
+								<ul class="list-group" align="right">
+							    	<li class="list-group-item">	نسبت آنی = {{ financialRatio.currentRatio }}</li>
+	    							<li class="list-group-item">	نسبت جاری = {{ financialRatio.quickRatio }}</li>
+	    
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>

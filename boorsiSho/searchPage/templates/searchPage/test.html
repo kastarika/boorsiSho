@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<h1>
+    enter search
+</h1>
+<form action="{% url 'searchPage:getSearchQuery' %}" method="POST">
+    {% csrf_token %}
+
+    <input type="text" name="searchKeyWord">
+    <input type="submit" value="submit">
+</form>
+
+</html>

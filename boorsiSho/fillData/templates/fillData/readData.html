@@ -2,7 +2,7 @@
 
 <html>
     <h1>upload data</h1>
-    <form enctype="multipart/form-data" method="post">
+    <form action="{% url 'fillData:fillInDatabase' %}" enctype="multipart/form-data" method="post">
         {% csrf_token %}
         <input type="file" name="dataSheet">
         <button type="submit">upload</button>

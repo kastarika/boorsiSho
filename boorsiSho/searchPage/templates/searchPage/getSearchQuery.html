@@ -10,16 +10,20 @@
   </head>
   <body>
     <div class="s002">
-      <form>
+      <form action="{% url 'searchPage:getSearchQuery' %}" method="POST">
         <fieldset>
           <legend>سامانه تحلیل بنیادین سهام</legend>
         </fieldset>
+        
         <div class="inner-form">
+          
+          {% csrf_token %}
           <div class="input-field first-wrap">
             <div class="icon-wrap">
 				<i class="fa fa-search"></i>
             </div>
-            <input class="customInput" type="text" placeholder="نام شرکت یا نماد را وارد کنید."  />
+          
+            <input name="searchKeyWord" class="customInput" type="text" placeholder="نام شرکت یا نماد را وارد کنید."  />
           </div>
           <!--<div class="input-field second-wrap">
              <div class="icon-wrap">
@@ -43,8 +47,9 @@
             </div>
           </div>-->
           <div class="input-field fifth-wrap">
-            <button class="btn-search" type="button">جستجو</button>
+            <button class="btn-search" type="submit">جستجو</button>
           </div>
+        
         </div>
       </form>
     </div>
